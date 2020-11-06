@@ -57,6 +57,7 @@ import ApplicationPage from 'components/ApplicationPage'
 import AttendancePage from '~components/AttendancePage'
 import { hasRole } from '~utils/roles'
 import { getAuthStatus, AuthStatus } from '~api/auth'
+import AttachmentTest from '~AttachmentTest'
 
 export default function App() {
   const { i18n } = useTranslation()
@@ -308,6 +309,7 @@ export default function App() {
                 to: ({ id }) => `/finance/invoices/${id}`
               }
             ])}
+            <Route exact path="/attachment-test" component={AttachmentTest} />
             <Route exact path="/" component={RedirectToMainPage} />
           </Switch>
           <ErrorMessage />
